@@ -1,0 +1,39 @@
+{
+  "title": "Variety Shoe",
+  "logo": "shoe.svg",
+  "subtitle": "Footwear for every occasion",
+  "footer": "Created by Harold Sikkema for <i>Databases and Dynamic Data</i> at Sheridan College",
+  "shoes": [
+    {
+      "name": "Orange Crocs",
+      "description": "A bit cringe, really.",
+      "background": "#FF6600"
+    },
+    {
+      "name": "Green Slippers",
+      "description": "For the ballroom, mostly",
+      "background": "#119933"
+    },
+    {
+      "name": "Yellow Havaianas",
+      "description": "Life is a beach in Brazil",
+      "background": "#ffcc00"
+    },
+    {
+      "name": "Blue Suede Shoes",
+      "description": "One for the money, two for the show",
+      "background": "#8866ee"
+    },
+    {
+      "name": "Dress Shoes",
+      "description": "comfortable but not too comfortable.",
+      "background": "#556677"
+    }
+    ,
+    {
+      "name": "Birkenstock",
+      "description": "A solid sandal",
+      "background": "#ff9933"
+    }
+  ]
+}
