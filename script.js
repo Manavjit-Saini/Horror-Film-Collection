@@ -4,22 +4,31 @@ async function fetchHorrorMovies() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
+    console.log('API Response:', data);
 
-    // Get the HTML element where movies will display
     const container = document.getElementById('movie-container');
     if (!container) return;
     container.innerHTML = '';
 
-    // Loop through movies and display them
-    data.results.forEach(movie => {
+    // Extract the results array from the JSON response
+    const movies = data.results || [];
+
+    movies.forEach(movie => {
       const card = document.createElement('div');
       card.className = 'movie-card';
 
+      const title = movie.title || 'Untitled Horror Movie';
+      const year = movie.year || 'N/A';
+      
+      // Build full image URL from relative path or use placeholder
+      const posterUrl = movie.poster 
+        ? `https://ww1.horrorarchive.com/${movie.poster}` 
+        : 'https://via.placeholder.com/300x450?text=No+Poster';
+
       card.innerHTML = `
-        <img src="${movie.primaryImage || 'https://via.placeholder.com/300x450?text=No+Poster'}" alt="${movie.titleText?.text || 'Movie Poster'}" />
-        <h3>${movie.titleText?.text || 'Untitled'}</h3>
-        <p>${movie.releaseYear?.year || 'N/A'}</p>
+        <img src="${posterUrl}" alt="${title}" onerror="this.src='https://via.placeholder.com/300x450?text=No+Poster'" />
+        <h3>${title}</h3>
+        <p>${year}</p>
       `;
 
       container.appendChild(card);
