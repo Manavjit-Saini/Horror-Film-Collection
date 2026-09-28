@@ -11,8 +11,8 @@ app.get('/api/movies', async (req, res) => {
   try {
     const response = await fetch('https://horror-archive1.p.rapidapi.com/items?limit=50&page=10', {
       headers: {
-        'x-rapidapi-key': process.env.RAPIDAPI_KEY || 'e72af88687mshe0efc1ec959c2dfp1505f7jsn42efc56937de',
-        'x-rapidapi-host': 'horror-archive1.p.rapidapi.com'
+        'x-rapidapi-key': 'e72af88687mshe0efc1ec959c2dfp1505f7jsn42efc56937de',
+  'x-rapidapi-host': 'horror-archive1.p.rapidapi.com'
       }
     });
 
