@@ -12,17 +12,29 @@ async function fetchHorrorMovies() {
 
     const movies = data.results || [];
 
-    movies.forEach(movie => {
+    for (const movie of movies) {
       const card = document.createElement('div');
       card.className = 'movie-card';
 
       const title = movie.title || 'Untitled Horror Movie';
       const year = movie.year || 'N/A';
-      
-      // Use full CDN URL or placeholder fallback
-      const posterUrl = movie.poster && movie.poster.startsWith('http')
-        ? movie.poster 
-        : `https://via.placeholder.com/300x450/111/fff?text=${encodeURIComponent(title)}`;
+      const imdbId = movie.external_ids?.imdb;
+
+      // Primary fallback poster
+      let posterUrl = `https://via.placeholder.com/300x450/111/fff?text=${encodeURIComponent(title)}`;
+
+      // Fetch actual poster image using IMDb ID via OMDb public endpoint if available
+      if (imdbId) {
+        try {
+          const imgRes = await fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=trilogy`);
+          const imgData = await imgRes.json();
+          if (imgData.Poster && imgData.Poster !== 'N/A') {
+            posterUrl = imgData.Poster;
+          }
+        } catch (e) {
+          console.error('Poster fetch failed for', title, e);
+        }
+      }
 
       card.innerHTML = `
         <img src="${posterUrl}" alt="${title}" onerror="this.src='https://via.placeholder.com/300x450/111/fff?text=${encodeURIComponent(title)}'" />
@@ -31,7 +43,7 @@ async function fetchHorrorMovies() {
       `;
 
       container.appendChild(card);
-    });
+    }
   } catch (error) {
     console.error('Error fetching horror movies:', error);
   }
