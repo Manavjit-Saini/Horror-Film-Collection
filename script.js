@@ -10,7 +10,6 @@ async function fetchHorrorMovies() {
     if (!container) return;
     container.innerHTML = '';
 
-    // Extract the results array from the JSON response
     const movies = data.results || [];
 
     movies.forEach(movie => {
@@ -20,13 +19,13 @@ async function fetchHorrorMovies() {
       const title = movie.title || 'Untitled Horror Movie';
       const year = movie.year || 'N/A';
       
-      // Build full image URL from relative path or use placeholder
-      const posterUrl = movie.poster 
-        ? `https://ww1.horrorarchive.com/${movie.poster}` 
-        : 'https://via.placeholder.com/300x450?text=No+Poster';
+      // Use full CDN URL or placeholder fallback
+      const posterUrl = movie.poster && movie.poster.startsWith('http')
+        ? movie.poster 
+        : `https://via.placeholder.com/300x450/111/fff?text=${encodeURIComponent(title)}`;
 
       card.innerHTML = `
-        <img src="${posterUrl}" alt="${title}" onerror="this.src='https://via.placeholder.com/300x450?text=No+Poster'" />
+        <img src="${posterUrl}" alt="${title}" onerror="this.src='https://via.placeholder.com/300x450/111/fff?text=${encodeURIComponent(title)}'" />
         <h3>${title}</h3>
         <p>${year}</p>
       `;
