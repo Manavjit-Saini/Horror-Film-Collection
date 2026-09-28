@@ -1,15 +1,8 @@
 async function fetchHorrorMovies() {
-  const url = 'https://horror-archive1.p.rapidapi.com/items?limit=50&page=10';
-  const options = {
-    method: 'GET',
-    headers: {
-      'x-rapidapi-key': 'e72af88687mshe0efc1ec959c2dfp1505f7jsn42efc56937de',
-      'x-rapidapi-host': 'horror-archive1.p.rapidapi.com'
-    }
-  };
+  const url = '/api/movies';
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(url);
     const data = await response.json();
     console.log(data);
 
@@ -22,17 +15,18 @@ async function fetchHorrorMovies() {
     data.results.forEach(movie => {
       const card = document.createElement('div');
       card.className = 'movie-card';
+
       card.innerHTML = `
-        <h3>${movie.title || 'Untitled'} (${movie.year || 'N/A'})</h3>
-        <p>${movie.description ? movie.description.substring(0, 120) + '...' : 'No description available.'}</p>
+        <img src="${movie.primaryImage || 'https://via.placeholder.com/300x450?text=No+Poster'}" alt="${movie.titleText?.text || 'Movie Poster'}" />
+        <h3>${movie.titleText?.text || 'Untitled'}</h3>
+        <p>${movie.releaseYear?.year || 'N/A'}</p>
       `;
+
       container.appendChild(card);
     });
-
   } catch (error) {
-    console.error('Fetch Error:', error);
+    console.error('Error fetching horror movies:', error);
   }
 }
 
-// Call the function when the page loads
 fetchHorrorMovies();
