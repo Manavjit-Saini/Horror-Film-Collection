@@ -1,30 +1,19 @@
 export default async function handler(req, res) {
-  const { ids, startYear, endYear } = req.query;
+  const { title, year } = req.query;
   const apiKey = process.env.TMDB_API_KEY;
 
   try {
-    // If specific movie IDs are provided in the query, fetch those specific films
-    if (ids) {
-      const idList = ids.split(',');
-      const promises = idList.map(id =>
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`).then(r => r.json())
-      );
-      const results = await Promise.all(promises);
+    if (title) {
+      const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(title)}&primary_release_year=${year || ''}`;
+      const response = await fetch(searchUrl);
+      const data = await response.json();
 
       res.setHeader('Access-Control-Allow-Origin', '*');
-      return res.status(200).json({ results });
+      return res.status(200).json(data);
     }
 
-    // Fallback search query
-    const startDate = `${startYear || 1930}-01-01`;
-    const endDate = `${endYear || 2026}-12-31`;
-    const tmdbUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=27&primary_release_date.gte=${startDate}&primary_release_date.lte=${endDate}&sort_by=vote_count.desc&page=1`;
-
-    const response = await fetch(tmdbUrl);
-    const data = await response.json();
-
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.status(200).json(data);
+    res.status(200).json({ results: [] });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Failed to fetch movies' });
