@@ -4,53 +4,53 @@
     "title": "1930s–1950s: Universal Monsters",
     "startYear": 1930,
     "endYear": 1959,
-    "thematicFocus": "Gothic escapism, romanticized monsters, external threats.",
-    "culturalContext": "Born during the Great Depression and World War II, horror allowed audiences to project their real-world anxieties onto fantastical, distant creatures (vampires, corpses, sea beasts). Monsters were symbolic and physically distinct from 'normal' human society. Fear of nuclear war and annihilation led to anxieties that were reflected in films like Godzilla and King Kong.",
-    "featuredMovieIds": [3035, 3036, 1678, 244, 397]
+    "thematicFocus": "Gothic escapism, romanticized monsters, external threats, nuclear anxiety.",
+    "culturalContext": "Born during the Great Depression and World War II, horror allowed audiences to project real-world anxieties onto fantastical creatures. Later, Cold War nuclear fears manifested in giant monster cinema.",
+    "featuredMovieIds": [3035, 3036, 1678, 244, 397, 10972, 11843]
   },
   {
     "id": "psychological-shift",
     "title": "1960s–1970s: Psychological Shift",
     "startYear": 1960,
     "endYear": 1979,
-    "thematicFocus": "Real-world violence, domestic terror, loss of institutional trust.",
-    "culturalContext": "Civil rights unrest, the Vietnam War, and the decay of the suburban nuclear family brought terror into domestic spaces (Psycho, Night of the Living Dead, The Texas Chain Saw Massacre). The monster was no longer a creature in a castle, but a neighbor or masked killer. The Exorcist and Carrie touched on anxieties surrounding female autonomy over their body during women's rights movements.",
-    "featuredMovieIds": [539, 10331, 10781, 9552, 731]
+    "thematicFocus": "Real-world violence, domestic terror, loss of institutional trust, female autonomy.",
+    "culturalContext": "Civil rights unrest, the Vietnam War, and the decay of the nuclear family shifted horror into domestic spaces. Monsters became human neighbors, masked killers, or bodily threats.",
+    "featuredMovieIds": [539, 10331, 10781, 9552, 731, 948, 348]
   },
   {
     "id": "slasher-satanic-panic",
     "title": "1980s: Slasher Boom & The Satanic Panic",
     "startYear": 1980,
     "endYear": 1989,
-    "thematicFocus": "Franchise morality plays, practical gore, censorship, and moral panic.",
-    "culturalContext": "The rise of home video (VHS) led to greater horror consumption, fueling mass-market slasher franchises (Friday the 13th, A Nightmare on Elm Street). Conservative social movements and the 'Satanic Panic' attempted to censor horror, resulting in heavily edited theatrical cuts and campier, formulaic sequels.",
-    "featuredMovieIds": [4488, 377, 948, 1091, 10138]
+    "thematicFocus": "Franchise morality plays, practical gore, censorship, home video explosion.",
+    "culturalContext": "The rise of VHS expanded horror consumption, spurring mass-market slasher franchises while conservative movements and Satanic Panic led to heavy censorship.",
+    "featuredMovieIds": [4488, 377, 1091, 10138, 933, 6267, 8334]
   },
   {
     "id": "postmodern-revival",
     "title": "1990s: Postmodern Revival",
     "startYear": 1990,
     "endYear": 1999,
-    "thematicFocus": "Self-awareness, meta-commentary, structural cynicism.",
-    "culturalContext": "After the over-saturation of 80s sequels, horror started to become self-conscious. Scream and Wes Craven's New Nightmare started to break and deconstruct the supposed rules of the genre for a new generation that grew up watching slasher films.",
-    "featuredMovieIds": [4232, 11021, 1721, 8334, 10823]
+    "thematicFocus": "Self-awareness, meta-commentary, genre deconstruction, structural cynicism.",
+    "culturalContext": "Over-saturation of 80s sequels caused horror to become self-conscious. Meta-horror subverted classic slasher rules for audiences raised on the genre.",
+    "featuredMovieIds": [4232, 11021, 274, 8071, 10129, 241, 1089]
   },
   {
     "id": "extreme-realism-torture",
     "title": "2000s: Extreme Realism & Torture Cinema",
     "startYear": 2000,
     "endYear": 2009,
-    "thematicFocus": "Visceral vulnerability, post-9/11 anxiety, surveillance, and body horror.",
-    "culturalContext": "Post-9/11 sociopolitical anxiety and 24-hour news coverage fueled uncompromising, claustrophobic violence (Saw, Hostel) alongside techno-dread remakes of Asian horror (The Ring). Fear shifted from specific masked killers to feeling trapped and helpless against institutions and physical suffering.",
-    "featuredMovieIds": [176, 1580, 565, 1576, 1092]
+    "thematicFocus": "Post-9/11 anxiety, surveillance, visceral vulnerability, techno-dread.",
+    "culturalContext": "Post-9/11 sociopolitical anxiety and 24-hour news coverage fueled claustrophobic violence, alongside techno-dread remakes of J-horror.",
+    "featuredMovieIds": [176, 1580, 565, 1581, 1092, 1250, 2001]
   },
   {
     "id": "haunted-elevated",
     "title": "2010s–Present: Blockbuster Haunted Houses & Elevated Horror",
     "startYear": 2010,
     "endYear": 2026,
-    "thematicFocus": "Mainstream cinematic universes vs. grief, trauma, and auteur dread.",
-    "culturalContext": "The modern era split into two distinct models: studio-driven, jump-scare 'haunted house' franchises (The Conjuring) for mass audiences, and indie 'elevated/auteur horror' (Hereditary, Midsommar, Get Out) that uses horror conventions to explore grief, generational trauma, social inequality, and psychological decay.",
-    "featuredMovieIds": [493922, 419430, 530385, 138843, 460885]
+    "thematicFocus": "Cinematic universes vs. grief, trauma, social inequality, and auteur dread.",
+    "culturalContext": "The modern era split into studio-driven jump-scare franchises and indie elevated horror using horror conventions to explore grief and generational trauma.",
+    "featuredMovieIds": [460885, 493922, 530385, 138843, 420818, 310131, 8071]
   }
 ]
