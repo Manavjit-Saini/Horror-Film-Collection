@@ -6,7 +6,14 @@
     "endYear": 1959,
     "thematicFocus": "Gothic escapism, romanticized monsters, external threats, nuclear anxiety.",
     "culturalContext": "Born during the Great Depression and World War II, horror allowed audiences to project real-world anxieties onto fantastical creatures. Later, Cold War nuclear fears manifested in giant monster cinema.",
-    "featuredMovieIds": [3035, 3036, 1678, 244, 397, 10972, 11843]
+    "featuredMovies": [
+      { "title": "Frankenstein", "year": "1931" },
+      { "title": "Dracula", "year": "1931" },
+      { "title": "King Kong", "year": "1933" },
+      { "title": "Godzilla", "year": "1954" },
+      { "title": "Creature from the Black Lagoon", "year": "1954" },
+      { "title": "Invasion of the Body Snatchers", "year": "1956" }
+    ]
   },
   {
     "id": "psychological-shift",
@@ -15,7 +22,14 @@
     "endYear": 1979,
     "thematicFocus": "Real-world violence, domestic terror, loss of institutional trust, female autonomy.",
     "culturalContext": "Civil rights unrest, the Vietnam War, and the decay of the nuclear family shifted horror into domestic spaces. Monsters became human neighbors, masked killers, or bodily threats.",
-    "featuredMovieIds": [539, 10331, 10781, 9552, 731, 948, 348]
+    "featuredMovies": [
+      { "title": "Psycho", "year": "1960" },
+      { "title": "Night of the Living Dead", "year": "1968" },
+      { "title": "The Texas Chain Saw Massacre", "year": "1974" },
+      { "title": "The Exorcist", "year": "1973" },
+      { "title": "Carrie", "year": "1976" },
+      { "title": "Alien", "year": "1979" }
+    ]
   },
   {
     "id": "slasher-satanic-panic",
@@ -24,7 +38,14 @@
     "endYear": 1989,
     "thematicFocus": "Franchise morality plays, practical gore, censorship, home video explosion.",
     "culturalContext": "The rise of VHS expanded horror consumption, spurring mass-market slasher franchises while conservative movements and Satanic Panic led to heavy censorship.",
-    "featuredMovieIds": [4488, 377, 1091, 10138, 933, 6267, 8334]
+    "featuredMovies": [
+      { "title": "Friday the 13th", "year": "1980" },
+      { "title": "A Nightmare on Elm Street", "year": "1984" },
+      { "title": "The Thing", "year": "1982" },
+      { "title": "Child's Play", "year": "1988" },
+      { "title": "Hellraiser", "year": "1987" },
+      { "title": "The Fly", "year": "1986" }
+    ]
   },
   {
     "id": "postmodern-revival",
@@ -33,7 +54,14 @@
     "endYear": 1999,
     "thematicFocus": "Self-awareness, meta-commentary, genre deconstruction, structural cynicism.",
     "culturalContext": "Over-saturation of 80s sequels caused horror to become self-conscious. Meta-horror subverted classic slasher rules for audiences raised on the genre.",
-    "featuredMovieIds": [4232, 11021, 274, 8071, 10129, 241, 1089]
+    "featuredMovies": [
+      { "title": "Scream", "year": "1996" },
+      { "title": "Wes Craven's New Nightmare", "year": "1994" },
+      { "title": "The Blair Witch Project", "year": "1999" },
+      { "title": "The Silence of the Lambs", "year": "1991" },
+      { "title": "Candyman", "year": "1992" },
+      { "title": "The Sixth Sense", "year": "1999" }
+    ]
   },
   {
     "id": "extreme-realism-torture",
@@ -42,7 +70,14 @@
     "endYear": 2009,
     "thematicFocus": "Post-9/11 anxiety, surveillance, visceral vulnerability, techno-dread.",
     "culturalContext": "Post-9/11 sociopolitical anxiety and 24-hour news coverage fueled claustrophobic violence, alongside techno-dread remakes of J-horror.",
-    "featuredMovieIds": [176, 1580, 565, 1581, 1092, 1250, 2001]
+    "featuredMovies": [
+      { "title": "Saw", "year": "2004" },
+      { "title": "Hostel", "year": "2005" },
+      { "title": "The Ring", "year": "2002" },
+      { "title": "28 Days Later", "year": "2002" },
+      { "title": "The Descent", "year": "2005" },
+      { "title": "Paranormal Activity", "year": "2007" }
+    ]
   },
   {
     "id": "haunted-elevated",
@@ -51,6 +86,13 @@
     "endYear": 2026,
     "thematicFocus": "Cinematic universes vs. grief, trauma, social inequality, and auteur dread.",
     "culturalContext": "The modern era split into studio-driven jump-scare franchises and indie elevated horror using horror conventions to explore grief and generational trauma.",
-    "featuredMovieIds": [460885, 493922, 530385, 138843, 420818, 310131, 8071]
+    "featuredMovies": [
+      { "title": "Get Out", "year": "2017" },
+      { "title": "Hereditary", "year": "2018" },
+      { "title": "Midsommar", "year": "2019" },
+      { "title": "The Conjuring", "year": "2013" },
+      { "title": "The Witch", "year": "2015" },
+      { "title": "It", "year": "2017" }
+    ]
   }
 ]
