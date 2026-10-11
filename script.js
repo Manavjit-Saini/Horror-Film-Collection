@@ -1,85 +1,21 @@
-document.addEventListener('DOMContentLoaded', async () => {
+export default async function handler(req, res) {
+  const { title, year } = req.query;
+  const apiKey = process.env.TMDB_API_KEY;
+
   try {
-    const response = await fetch('./eras.json');
-    if (!response.ok) throw new Error('Failed to load eras.json');
-    const eras = await response.json();
+    if (title) {
+      const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(title)}&primary_release_year=${year || ''}`;
+      const response = await fetch(searchUrl);
+      const data = await response.json();
 
-    renderEraButtons(eras);
-
-    if (eras.length > 0) {
-      selectEra(eras[0]);
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      return res.status(200).json(data);
     }
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.status(200).json({ results: [] });
   } catch (error) {
-    console.error('Initialization error:', error);
+    console.error(error);
+    res.status(500).json({ error: 'Failed to fetch movies' });
   }
-});
-
-function renderEraButtons(eras) {
-  let eraNav = document.querySelector('.era-nav');
-  if (!eraNav) {
-    eraNav = document.createElement('nav');
-    eraNav.className = 'era-nav';
-    const container = document.getElementById('movie-container');
-    document.body.insertBefore(eraNav, container);
-  }
-
-  eraNav.innerHTML = '';
-  eras.forEach(era => {
-    const btn = document.createElement('button');
-    btn.innerText = era.title;
-    btn.onclick = () => selectEra(era);
-    eraNav.appendChild(btn);
-  });
-}
-
-async function selectEra(era) {
-  const container = document.getElementById('movie-container');
-  if (!container) return;
-
-  container.innerHTML = `
-    <div class="era-header">
-      <h2>${era.title}</h2>
-      <p><strong>Thematic Focus:</strong> ${era.thematicFocus}</p>
-      <p><strong>Cultural Context:</strong> ${era.culturalContext}</p>
-    </div>
-    <div class="grid"><p>Loading movies for this era...</p></div>
-  `;
-
-  try {
-    const res = await fetch(`/api/movies?ids=${era.featuredMovieIds.join(',')}`);
-    const data = await res.json();
-    renderMovies(data.results || []);
-  } catch (err) {
-    console.error('Error fetching movies:', err);
-    const grid = container.querySelector('.grid');
-    if (grid) grid.innerHTML = '<p>Error loading movie data.</p>';
-  }
-}
-
-function renderMovies(movies) {
-  const grid = document.querySelector('.grid');
-  if (!grid) return;
-
-  if (movies.length === 0) {
-    grid.innerHTML = '<p>No movies found.</p>';
-    return;
-  }
-
-  grid.innerHTML = movies.map(movie => {
-    const poster = movie.poster_path 
-      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-      : 'https://via.placeholder.com/500x750?text=No+Poster';
-
-    const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
-
-    return `
-      <div class="movie-card">
-        <img src="${poster}" alt="${movie.title || 'Movie Poster'}" />
-        <div class="movie-info">
-          <h3>${movie.title || 'Untitled'}</h3>
-          <p>Released: ${year}</p>
-        </div>
-      </div>
-    `;
-  }).join('');
 }
