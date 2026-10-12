@@ -128,7 +128,7 @@ function renderMovies(movies) {
   });
 }
 
-// Opens the detail modal overlay for a selected movie cleanly
+// Opens the detail modal overlay for a selected movie with accurate director, cast, and runtime
 function openMovieModal(movie) {
   const modal = document.getElementById('movie-modal');
   const modalBody = document.getElementById('modal-body');
@@ -142,6 +142,27 @@ function openMovieModal(movie) {
   const rating = movie.vote_average ? `${movie.vote_average.toFixed(1)} / 10` : 'N/A';
   const overview = movie.overview || 'No overview available for this title.';
 
+  // Format runtime (e.g., minutes to hours/mins)
+  let runtimeFormatted = '';
+  if (movie.runtime) {
+    const hours = Math.floor(movie.runtime / 60);
+    const mins = movie.runtime % 60;
+    runtimeFormatted = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+  }
+
+  // Extract Director
+  let directorName = 'N/A';
+  if (movie.credits && movie.credits.crew) {
+    const director = movie.credits.crew.find(person => person.job === 'Director');
+    if (director) directorName = director.name;
+  }
+
+  // Extract Top 3 Actors
+  let castNames = 'N/A';
+  if (movie.credits && movie.credits.cast) {
+    castNames = movie.credits.cast.slice(0, 3).map(actor => actor.name).join(', ');
+  }
+
   modalBody.innerHTML = `
     <img class="modal-poster" src="${posterUrl}" alt="${movie.title}">
     <div class="modal-details">
@@ -149,10 +170,16 @@ function openMovieModal(movie) {
       
       <div class="modal-meta-row">
         <span class="modal-rating">★ ${rating}</span>
+        ${runtimeFormatted ? `<span>• ${runtimeFormatted}</span>` : ''}
         <span>• Horror</span>
       </div>
 
       <p class="modal-overview">${overview}</p>
+
+      <div class="modal-crew-info">
+        <p><strong>Director:</strong> ${directorName}</p>
+        <p><strong>Cast:</strong> ${castNames}</p>
+      </div>
     </div>
   `;
 
