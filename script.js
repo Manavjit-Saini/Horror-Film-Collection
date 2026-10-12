@@ -146,7 +146,7 @@ function openMovieModal(movie) {
     <img class="modal-poster" src="${posterUrl}" alt="${movie.title}">
     <div class="modal-details">
       <h2>${movie.title} (${year})</h2>
-      <div class="modal-meta">TMDB Rating: ★ ${rating}</div>
+      <div class="modal-meta">Rating: ★ ${rating}</div>
       <p class="modal-overview">${overview}</p>
     </div>
   `;
