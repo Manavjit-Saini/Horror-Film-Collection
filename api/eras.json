@@ -24,7 +24,7 @@
         "category": "Atomic Age & Creature Features",
         "movies": [
           { "id": 10972, "title": "Creature from the Black Lagoon", "year": "1954" },
-          { "id": 397, "title": "Godzilla", "year": "1954" },
+          { "id": 1678, "title": "Godzilla", "year": "1954" },
           { "id": 16127, "title": "Them!", "year": "1954" },
           { "id": 11843, "title": "Invasion of the Body Snatchers", "year": "1956" },
           { "id": 11357, "title": "The Fly", "year": "1958" },
@@ -106,4 +106,85 @@
     "startYear": 1990,
     "endYear": 1999,
     "thematicFocus": "Self-awareness, meta-commentary, genre deconstruction, structural cynicism.",
-    "culturalContext": "Over-saturation of 80s sequels caused horror to become self-conscious. Meta-horror subverted classic slasher rules for audiences raised on the genre
+    "culturalContext": "Over-saturation of 80s sequels caused horror to become self-conscious. Meta-horror subverted classic slasher rules for audiences raised on the genre.",
+    "subgenres": [
+      {
+        "category": "Meta-Slasher & Deconstruction",
+        "movies": [
+          { "id": 11021, "title": "Wes Craven's New Nightmare", "year": "1994" },
+          { "id": 4232, "title": "Scream", "year": "1996" },
+          { "id": 2120, "title": "I Know What You Did Last Summer", "year": "1997" }
+        ]
+      },
+      {
+        "category": "Psychological Thrillers & Found Footage",
+        "movies": [
+          { "id": 1089, "title": "Misery", "year": "1990" },
+          { "id": 274, "title": "The Silence of the Lambs", "year": "1991" },
+          { "id": 10129, "title": "Candyman", "year": "1992" },
+          { "id": 807, "title": "Se7en", "year": "1995" },
+          { "id": 2671, "title": "Ringu", "year": "1998" },
+          { "id": 8071, "title": "The Blair Witch Project", "year": "1999" },
+          { "id": 241, "title": "The Sixth Sense", "year": "1999" },
+          { "id": 11075, "title": "Audition", "year": "1999" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "extreme-realism-torture",
+    "title": "2000s: Extreme Realism & Torture Cinema",
+    "startYear": 2000,
+    "endYear": 2009,
+    "thematicFocus": "Post-9/11 anxiety, surveillance, visceral vulnerability, techno-dread.",
+    "culturalContext": "Post-9/11 sociopolitical anxiety and 24-hour news coverage fueled claustrophobic violence, alongside techno-dread remakes of J-horror.",
+    "subgenres": [
+      {
+        "category": "Torture Cinema & Visceral Horror",
+        "movies": [
+          { "id": 9532, "title": "Final Destination", "year": "2000" },
+          { "id": 176, "title": "Saw", "year": "2004" },
+          { "id": 747, "title": "Shaun of the Dead", "year": "2004" },
+          { "id": 1092, "title": "The Descent", "year": "2005" },
+          { "id": 1580, "title": "Hostel", "year": "2005" },
+          { "id": 1980, "title": "The Orphanage", "year": "2007" },
+          { "id": 11634, "title": "The Strangers", "year": "2008" },
+          { "id": 29917, "title": "Martyrs", "year": "2008" }
+        ]
+      },
+      {
+        "category": "Techno-Dread & J-Horror Remakes",
+        "movies": [
+          { "id": 565, "title": "The Ring", "year": "2002" },
+          { "id": 1581, "title": "28 Days Later", "year": "2002" },
+          { "id": 1422, "title": "Paranormal Activity", "year": "2007" },
+          { "id": 862, "title": "Cloverfield", "year": "2008" },
+          { "id": 13310, "title": "Let the Right One In", "year": "2008" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "haunted-elevated",
+    "title": "2010s–Present: Haunted Houses & Elevated Horror",
+    "startYear": 2010,
+    "endYear": 2026,
+    "thematicFocus": "Cinematic universes vs. grief, trauma, social inequality, and auteur dread.",
+    "culturalContext": "The modern era split into studio-driven jump-scare franchises and indie elevated horror using horror conventions to explore grief and generational trauma.",
+    "subgenres": [
+      {
+        "category": "Elevated & Auteur Dread",
+        "movies": [
+          { "id": 242224, "title": "The Babadook", "year": "2014" },
+          { "id": 270303, "title": "It Follows", "year": "2014" },
+          { "id": 310131, "title": "The Witch", "year": "2015" },
+          { "id": 419430, "title": "Get Out", "year": "2017" },
+          { "id": 493922, "title": "Hereditary", "year": "2018" },
+          { "id": 530385, "title": "Midsommar", "year": "2019" },
+          { "id": 570670, "title": "The Invisible Man", "year": "2020" },
+          { "id": 913290, "title": "Barbarian", "year": "2022" },
+          { "id": 944352, "title": "Pearl", "year": "2022" }
+        ]
+      },
+      {
+        "category": "Blockbuster
