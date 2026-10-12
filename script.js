@@ -20,13 +20,14 @@ async function selectEra(era) {
       allMovieItems = era.featuredMovies;
     }
 
-    // 2. Fetch all movies using their exact TMDB IDs in parallel or sequentially
+    // 2. Fetch all movies using their exact TMDB IDs in parallel
     const moviePromises = allMovieItems.map(async (item) => {
       try {
-        // Fetch directly using the ID endpoint of your API
         const res = await fetch(`/api/movies?id=${item.id}`);
         const data = await res.json();
-        return data; // Assumes your API returns the movie object when queried by ID
+        // If TMDB returns an error object or empty, return null
+        if (data.success === false || data.status_code) return null;
+        return data;
       } catch (e) {
         console.error(`Failed to fetch ID ${item.id}:`, e);
         return null;
