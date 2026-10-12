@@ -18,7 +18,12 @@ export default async function handler(req, res) {
     const data = await response.json();
 
     if (data.results && data.results.length > 0) {
-      return res.status(200).json(data.results[0]);
+      // Find an exact title match (case-insensitive) from the results, fallback to first result if none exact
+      const exactMatch = data.results.find(m => 
+        m.title.toLowerCase() === title.toLowerCase()
+      ) || data.results[0];
+
+      return res.status(200).json(exactMatch);
     }
 
     return res.status(404).json({ error: 'Movie not found' });
