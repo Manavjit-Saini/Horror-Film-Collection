@@ -10,7 +10,7 @@ async function selectEra(era) {
     </div>
     <div class="grid"><p>Loading films...</p></div>
   `;
-
+console.log(`Checking "${item.title}":`, data);
   try {
     // 1. Gather all movies across all subgenres in this era
     let allMovieItems = [];
