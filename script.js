@@ -33,7 +33,7 @@ function initNav(eras) {
   });
 }
 
-// Handles selecting an era and fetching movie data by ID
+// Handles selecting an era and fetching movie data by title
 async function selectEra(era) {
   const container = document.getElementById('movie-container');
   if (!container) return;
@@ -57,13 +57,13 @@ async function selectEra(era) {
 
     const moviePromises = allMovieItems.map(async (item) => {
       try {
-        const res = await fetch(`/api/movies?id=${item.id}`);
+        const res = await fetch(`/api/movies?title=${encodeURIComponent(item.title)}`);
         const data = await res.json();
         // Skip empty or error payloads
         if (!data || data.success === false || !data.title) return null;
         return data;
       } catch (e) {
-        console.error(`Failed to fetch ID ${item.id}:`, e);
+        console.error(`Failed to fetch title ${item.title}:`, e);
         return null;
       }
     });
