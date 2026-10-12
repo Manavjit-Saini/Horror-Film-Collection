@@ -24,18 +24,31 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-// Creates navigation buttons dynamically in .era-nav
+// Creates navigation buttons dynamically in .era-nav with active states
 function initNav(eras) {
   const navContainer = document.querySelector('.era-nav');
   if (!navContainer) return;
 
   navContainer.innerHTML = '';
-  eras.forEach((era) => {
+  eras.forEach((era, index) => {
     const btn = document.createElement('button');
     btn.textContent = era.title;
-    btn.addEventListener('click', () => selectEra(era));
+    btn.setAttribute('data-era-id', era.id || index);
+    
+    btn.addEventListener('click', (e) => {
+      selectEra(era);
+      
+      // Update active state class on buttons
+      document.querySelectorAll('.era-nav button').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+    });
+
     navContainer.appendChild(btn);
   });
+
+  // Set the first button active by default on load
+  const firstBtn = navContainer.querySelector('button');
+  if (firstBtn) firstBtn.classList.add('active');
 }
 
 // Handles selecting an era and fetching movie data
@@ -46,7 +59,7 @@ async function selectEra(era) {
   container.innerHTML = `
     <div class="era-header">
       <h2>${era.title}</h2>
-      <p><strong>Thematic Focus:</strong> ${era.thematicFocus}</p>
+      ${era.thematicFocus ? `<p><strong>Thematic Focus:</strong> ${era.thematicFocus}</p>` : ''}
       <p><strong>Cultural Context:</strong> ${era.culturalContext}</p>
     </div>
     <div class="grid"><p>Loading films...</p></div>
@@ -128,7 +141,7 @@ function renderMovies(movies) {
   });
 }
 
-// Opens the detail modal overlay for a selected movie with accurate director, cast, and runtime
+// Opens the detail modal overlay for a selected movie with runtime, director, and cast
 function openMovieModal(movie) {
   const modal = document.getElementById('movie-modal');
   const modalBody = document.getElementById('modal-body');
@@ -142,7 +155,7 @@ function openMovieModal(movie) {
   const rating = movie.vote_average ? `${movie.vote_average.toFixed(1)} / 10` : 'N/A';
   const overview = movie.overview || 'No overview available for this title.';
 
-  // Format runtime (e.g., minutes to hours/mins)
+  // Format runtime (minutes to hours/mins)
   let runtimeFormatted = '';
   if (movie.runtime) {
     const hours = Math.floor(movie.runtime / 60);
@@ -150,14 +163,14 @@ function openMovieModal(movie) {
     runtimeFormatted = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
   }
 
-  // Extract Director
+  // Extract Director from credits crew
   let directorName = 'N/A';
   if (movie.credits && movie.credits.crew) {
     const director = movie.credits.crew.find(person => person.job === 'Director');
     if (director) directorName = director.name;
   }
 
-  // Extract Top 3 Actors
+  // Extract Top 3 Actors from credits cast
   let castNames = 'N/A';
   if (movie.credits && movie.credits.cast) {
     castNames = movie.credits.cast.slice(0, 3).map(actor => actor.name).join(', ');
