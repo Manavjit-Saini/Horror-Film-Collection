@@ -111,4 +111,32 @@
     "title": "1990s: Postmodern Revival",
     "startYear": 1990,
     "endYear": 1999,
-    "thematicFocus": "
+    "thematicFocus": "Self-awareness, meta-commentary, genre deconstruction, structural cynicism.",
+    "culturalContext": "Over-saturation of 80s sequels caused horror to become self-conscious. Meta-horror subverted classic slasher rules for audiences raised on the genre.",
+    "subgenres": [
+      {
+        "category": "Meta-Slasher & Deconstruction",
+        "movies": [
+          { "id": 4232, "title": "Scream", "year": "1996" },
+          { "id": 11021, "title": "Wes Craven's New Nightmare", "year": "1994" },
+          { "id": 4233, "title": "Scream 2", "year": "1997" },
+          { "id": 2120, "title": "I Know What You Did Last Summer", "year": "1997" },
+          { "id": 9890, "title": "Urban Legend", "year": "1998" }
+        ]
+      },
+      {
+        "category": "Psychological Thrillers & Found Footage",
+        "movies": [
+          { "id": 274, "title": "The Silence of the Lambs", "year": "1991" },
+          { "id": 8071, "title": "The Blair Witch Project", "year": "1999" },
+          { "id": 10129, "title": "Candyman", "year": "1992" },
+          { "id": 241, "title": "The Sixth Sense", "year": "1999" },
+          { "id": 628, "title": "Interview with the Vampire", "year": "1994" },
+          { "id": 1089, "title": "Misery", "year": "1990" },
+          { "id": 9691, "title": "Jacob's Ladder", "year": "1990" },
+          { "id": 807, "title": "Se7en", "year": "1995" }
+        ]
+      }
+    ]
+  },
+  {
