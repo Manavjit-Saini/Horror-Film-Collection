@@ -10,7 +10,7 @@ async function selectEra(era) {
     </div>
     <div class="grid"><p>Loading films...</p></div>
   `;
-console.log(`Checking "${item.title}":`, data);
+
   try {
     // 1. Gather all movies across all subgenres in this era
     let allMovieItems = [];
@@ -26,8 +26,14 @@ console.log(`Checking "${item.title}":`, data);
       try {
         const res = await fetch(`/api/movies?title=${encodeURIComponent(item.title)}&year=${item.year}`);
         const data = await res.json();
+        
+        // Debug log placed correctly inside the loop:
+        console.log(`Checking "${item.title}":`, data);
+
         if (data.results && data.results[0]) {
           movies.push(data.results[0]);
+        } else {
+          console.warn(`No TMDB match found for: ${item.title} (${item.year})`);
         }
       } catch (e) {
         console.error(`Failed to fetch ${item.title}:`, e);
