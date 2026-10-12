@@ -265,3 +265,18 @@ h1 {
     min-width: 150px;
   }
 }
+.modal-crew-info {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.modal-crew-info strong {
+  color: #fff;
+  font-weight: 600;
+}
