@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const { title } = req.query;
+  const { title, year } = req.query;
   const apiKey = process.env.TMDB_API_KEY;
 
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -9,11 +9,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(title)}`;
+    let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(title)}`;
+    if (year) {
+      searchUrl += `&primary_release_year=${year}`;
+    }
+
     const response = await fetch(searchUrl);
     const data = await response.json();
 
-    // Return the top search result object directly so script.js matches structure
     if (data.results && data.results.length > 0) {
       return res.status(200).json(data.results[0]);
     }
