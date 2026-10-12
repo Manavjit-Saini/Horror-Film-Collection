@@ -29,4 +29,7 @@ export default async function handler(req, res) {
     console.error('TMDB API Error:', error);
     return res.status(500).json({ error: 'Failed to fetch movies' });
   }
+  // Inside your serverless function (api/movies.js)
+// When querying TMDB, append credits to get director and cast:
+const tmdbUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to_response=credits`;
 }
