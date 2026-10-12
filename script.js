@@ -1,4 +1,9 @@
+// Active movie list stored in memory for modal lookups
+let activeMoviesList = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
+  setupModalEvents();
+
   try {
     const res = await fetch('eras.json');
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
@@ -87,6 +92,7 @@ async function selectEra(era) {
 
 // Renders the movies array into HTML cards
 function renderMovies(movies) {
+  activeMoviesList = movies; // Save reference for modal lookup
   const grid = document.querySelector('#movie-container .grid');
   if (!grid) return;
 
@@ -95,13 +101,68 @@ function renderMovies(movies) {
     return;
   }
 
-  grid.innerHTML = movies.map(movie => `
-    <div class="movie-card">
-      <img src="${movie.poster_path ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : ''}" alt="${movie.title}">
-      <div class="movie-info">
-        <h3>${movie.title}</h3>
-        <p>Released: ${movie.release_date ? movie.release_date.split('-')[0] : 'N/A'}</p>
+  grid.innerHTML = movies.map((movie, index) => {
+    const posterUrl = movie.poster_path 
+      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` 
+      : 'https://via.placeholder.com/500x750?text=No+Poster';
+
+    const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
+
+    return `
+      <div class="movie-card" data-index="${index}" style="cursor: pointer;">
+        <img src="${posterUrl}" alt="${movie.title}" loading="lazy">
+        <div class="movie-info">
+          <h3>${movie.title}</h3>
+          <p>Released: ${year}</p>
+        </div>
       </div>
+    `;
+  }).join('');
+
+  // Attach click events to open the detail modal for each card
+  document.querySelectorAll('.movie-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const idx = card.getAttribute('data-index');
+      openMovieModal(activeMoviesList[idx]);
+    });
+  });
+}
+
+// Opens the detail modal overlay for a selected movie
+function openMovieModal(movie) {
+  const modal = document.getElementById('movie-modal');
+  const modalBody = document.getElementById('modal-body');
+  if (!modal || !modalBody || !movie) return;
+
+  const posterUrl = movie.poster_path 
+    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` 
+    : 'https://via.placeholder.com/500x750?text=No+Poster';
+
+  const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
+  const rating = movie.vote_average ? `${movie.vote_average.toFixed(1)} / 10` : 'N/A';
+  const overview = movie.overview || 'No overview available for this title.';
+
+  modalBody.innerHTML = `
+    <img class="modal-poster" src="${posterUrl}" alt="${movie.title}">
+    <div class="modal-details">
+      <h2>${movie.title} (${year})</h2>
+      <div class="modal-meta">TMDB Rating: ★ ${rating}</div>
+      <p class="modal-overview">${overview}</p>
     </div>
-  `).join('');
+  `;
+
+  modal.classList.remove('hidden');
+}
+
+// Sets up close button and backdrop click listeners for the modal
+function setupModalEvents() {
+  const modal = document.getElementById('movie-modal');
+  const closeBtn = document.getElementById('modal-close');
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.add('hidden');
+    });
+  }
 }
