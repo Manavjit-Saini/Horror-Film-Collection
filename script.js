@@ -33,7 +33,7 @@ function initNav(eras) {
   });
 }
 
-// Handles selecting an era and fetching movie data by title and primary release year
+// Handles selecting an era and fetching movie data
 async function selectEra(era) {
   const container = document.getElementById('movie-container');
   if (!container) return;
@@ -57,13 +57,21 @@ async function selectEra(era) {
 
     const moviePromises = allMovieItems.map(async (item) => {
       try {
-        const res = await fetch(`/api/movies?title=${encodeURIComponent(item.title)}&year=${item.year}`);
+        let fetchUrl = '/api/movies?';
+        if (item.id) {
+          fetchUrl += `id=${item.id}`;
+        } else {
+          fetchUrl += `title=${encodeURIComponent(item.title)}&year=${item.year}`;
+        }
+
+        const res = await fetch(fetchUrl);
         const data = await res.json();
+        
         // Skip empty or error payloads
         if (!data || data.success === false || !data.title) return null;
         return data;
       } catch (e) {
-        console.error(`Failed to fetch title ${item.title} (${item.year}):`, e);
+        console.error(`Failed to fetch ${item.title || item.id}:`, e);
         return null;
       }
     });
