@@ -147,6 +147,7 @@ h1 {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
+
 /* Modal Overlay */
 .modal-overlay {
   position: fixed;
@@ -174,14 +175,14 @@ h1 {
   background: #1f2833;
   color: #fff;
   border: 1px solid #2c3540;
-  border-radius: 10px;
+  border-radius: 12px;
   width: 90%;
-  max-width: 700px;
+  max-width: 750px;
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  padding: 2.2rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.9);
 }
 
 .modal-close-btn {
@@ -203,46 +204,32 @@ h1 {
 /* Modal Internal Layout */
 .modal-body {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.8rem;
+  align-items: flex-start;
 }
 
 .modal-poster {
   width: 200px;
-  border-radius: 6px;
+  min-width: 200px;
+  border-radius: 8px;
   object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
 }
 
 .modal-details {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 .modal-details h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: #fff;
+  line-height: 1.2;
 }
 
-.modal-meta {
-  font-size: 0.9rem;
-  color: #f1c40f;
-  font-weight: 600;
-}
-
-.modal-overview {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #c5c6c7;
-}
-
-/* Make modal stack vertically on small mobile screens */
-@media (max-width: 600px) {
-  .modal-body {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  /* Metadata Tagline (Runtime, Year, etc.) */
+/* Metadata Tagline Row */
 .modal-meta-row {
   display: flex;
   flex-wrap: wrap;
@@ -250,7 +237,6 @@ h1 {
   align-items: center;
   font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 0.5rem;
 }
 
 .modal-rating {
@@ -258,27 +244,24 @@ h1 {
   font-weight: 700;
 }
 
-/* Crew / Extra Info Row */
-.modal-crew {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 0.75rem;
-  margin-top: 1rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border-color);
-  font-size: 0.8rem;
-}
-
-.crew-item span {
-  display: block;
+.modal-overview {
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-muted);
-  font-size: 0.75rem;
 }
 
-.crew-item strong {
-  color: #fff;
-}
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .modal-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .modal-meta-row {
+    justify-content: center;
+  }
   .modal-poster {
     width: 150px;
+    min-width: 150px;
   }
 }
