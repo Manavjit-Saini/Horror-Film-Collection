@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const res = await fetch('eras.json');
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-    const eras = await res.json();
+    
+    // Fetch as raw text first and sanitize hidden control characters to prevent JSON parse errors
+    const rawText = await res.text();
+    const cleanText = rawText.replace(/[\u0000-\u001F\u007F-\u009F]/g, " ");
+    const eras = JSON.parse(cleanText);
     
     initNav(eras);
     if (eras.length > 0) selectEra(eras[0]);
@@ -15,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
+// Creates navigation buttons dynamically in .era-nav
 function initNav(eras) {
   const navContainer = document.querySelector('.era-nav');
   if (!navContainer) return;
@@ -28,6 +33,7 @@ function initNav(eras) {
   });
 }
 
+// Handles selecting an era and fetching movie data by ID
 async function selectEra(era) {
   const container = document.getElementById('movie-container');
   if (!container) return;
@@ -51,14 +57,13 @@ async function selectEra(era) {
 
     const moviePromises = allMovieItems.map(async (item) => {
       try {
-        const res = await fetch(`/api/movies?title=${encodeURIComponent(item.title)}`);
+        const res = await fetch(`/api/movies?id=${item.id}`);
         const data = await res.json();
-        if (data.results && data.results.length > 0) {
-          return data.results[0]; // Take top search match
-        }
-        return null;
+        // Skip empty or error payloads
+        if (!data || data.success === false || !data.title) return null;
+        return data;
       } catch (e) {
-        console.error(`Failed to fetch title ${item.title}:`, e);
+        console.error(`Failed to fetch ID ${item.id}:`, e);
         return null;
       }
     });
@@ -72,6 +77,7 @@ async function selectEra(era) {
   }
 }
 
+// Renders the movies array into HTML cards
 function renderMovies(movies) {
   const grid = document.querySelector('#movie-container .grid');
   if (!grid) return;
