@@ -15,7 +15,9 @@
           { "id": 1678, "title": "The Mummy", "year": "1932" },
           { "id": 244, "title": "King Kong", "year": "1933" },
           { "id": 11319, "title": "The Invisible Man", "year": "1933" },
-          { "id": 11984, "title": "The Wolf Man", "year": "1941" }
+          { "id": 11984, "title": "The Wolf Man", "year": "1941" },
+          { "id": 158, "title": "The Bride of Frankenstein", "year": "1935" },
+          { "id": 13915, "title": "Cat People", "year": "1942" }
         ]
       },
       {
@@ -26,7 +28,9 @@
           { "id": 11011, "title": "The Thing from Another World", "year": "1951" },
           { "id": 16127, "title": "The Them!", "year": "1954" },
           { "id": 11843, "title": "Invasion of the Body Snatchers", "year": "1956" },
-          { "id": 11357, "title": "The Fly", "year": "1958" }
+          { "id": 11357, "title": "The Fly", "year": "1958" },
+          { "id": 27289, "title": "The Blob", "year": "1958" },
+          { "id": 26978, "title": "Plan 9 from Outer Space", "year": "1959" }
         ]
       }
     ]
@@ -47,7 +51,9 @@
           { "id": 10781, "title": "The Texas Chain Saw Massacre", "year": "1974" },
           { "id": 948, "title": "Halloween", "year": "1978" },
           { "id": 8077, "title": "Rosemary's Baby", "year": "1968" },
-          { "id": 11902, "title": "Peeping Tom", "year": "1960" }
+          { "id": 11902, "title": "Peeping Tom", "year": "1960" },
+          { "id": 782, "title": "The Birds", "year": "1963" },
+          { "id": 11504, "title": "Black Christmas", "year": "1974" }
         ]
       },
       {
@@ -58,7 +64,9 @@
           { "id": 348, "title": "Alien", "year": "1979" },
           { "id": 11130, "title": "The Omen", "year": "1976" },
           { "id": 11973, "title": "Suspiria", "year": "1977" },
-          { "id": 11013, "title": "Dawn of the Dead", "year": "1978" }
+          { "id": 11013, "title": "Dawn of the Dead", "year": "1978" },
+          { "id": 11663, "title": "The Hills Have Eyes", "year": "1977" },
+          { "id": 12155, "title": "Invasion of the Body Snatchers", "year": "1978" }
         ]
       }
     ]
@@ -79,7 +87,9 @@
           { "id": 1091, "title": "The Thing", "year": "1982" },
           { "id": 10138, "title": "Child's Play", "year": "1988" },
           { "id": 10823, "title": "Hellraiser", "year": "1987" },
-          { "id": 11216, "title": "Poltergeist", "year": "1982" }
+          { "id": 11216, "title": "Poltergeist", "year": "1982" },
+          { "id": 11880, "title": "The Shining", "year": "1980" },
+          { "id": 11224, "title": "Creepshow", "year": "1982" }
         ]
       },
       {
@@ -90,7 +100,9 @@
           { "id": 10603, "title": "The Fog", "year": "1980" },
           { "id": 11522, "title": "An American Werewolf in London", "year": "1981" },
           { "id": 8334, "title": "The Lost Boys", "year": "1987" },
-          { "id": 10014, "title": "Re-Animator", "year": "1985" }
+          { "id": 10014, "title": "Re-Animator", "year": "1985" },
+          { "id": 11091, "title": "The Thing", "year": "1982" },
+          { "id": 1700, "title": "The Evil Dead", "year": "1981" }
         ]
       }
     ]
@@ -110,7 +122,8 @@
           { "id": 11021, "title": "Wes Craven's New Nightmare", "year": "1994" },
           { "id": 1721, "title": "30 Days of Night", "year": "1997" },
           { "id": 8334, "title": "I Know What You Did Last Summer", "year": "1997" },
-          { "id": 10823, "title": "Urban Legend", "year": "1998" }
+          { "id": 10823, "title": "Urban Legend", "year": "1998" },
+          { "id": 4233, "title": "Scream 2", "year": "1997" }
         ]
       },
       {
@@ -121,7 +134,9 @@
           { "id": 10129, "title": "Candyman", "year": "1992" },
           { "id": 241, "title": "The Sixth Sense", "year": "1999" },
           { "id": 8074, "title": "Interview with the Vampire", "year": "1994" },
-          { "id": 1089, "title": "Misery", "year": "1990" }
+          { "id": 1089, "title": "Misery", "year": "1990" },
+          { "id": 9691, "title": "Jacob's Ladder", "year": "1990" },
+          { "id": 137, "title": "Se7en", "year": "1995" }
         ]
       }
     ]
@@ -142,7 +157,9 @@
           { "id": 29917, "title": "Martyrs", "year": "2008" },
           { "id": 1092, "title": "The Descent", "year": "2005" },
           { "id": 1576, "title": "Resident Evil", "year": "2002" },
-          { "id": 1250, "title": "REC", "year": "2007" }
+          { "id": 1250, "title": "REC", "year": "2007" },
+          { "id": 1391, "title": "High Tension", "year": "2003" },
+          { "id": 9981, "title": "Wolf Creek", "year": "2005" }
         ]
       },
       {
@@ -152,7 +169,8 @@
           { "id": 1970, "title": "The Grudge", "year": "2004" },
           { "id": 1581, "title": "28 Days Later", "year": "2002" },
           { "id": 924, "title": "Dawn of the Dead", "year": "2004" },
-          { "id": 2001, "title": "Paranormal Activity", "year": "2007" }
+          { "id": 2001, "title": "Paranormal Activity", "year": "2007" },
+          { "id": 11621, "title": "The Devil's Backbone", "year": "2001" }
         ]
       }
     ]
@@ -173,18 +191,21 @@
           { "id": 530385, "title": "Midsommar", "year": "2019" },
           { "id": 310131, "title": "The Witch", "year": "2015" },
           { "id": 507089, "title": "Us", "year": "2019" },
-          { "id": 766170, "title": "Smile", "year": "2022" }
+          { "id": 766170, "title": "Smile", "year": "2022" },
+          { "id": 419430, "title": "Get Out", "year": "2017" },
+          { "id": 661374, "title": "Glass Onion", "year": "2022" }
         ]
       },
       {
         "category": "Blockbuster Haunted Houses & Studio Universes",
         "movies": [
           { "id": 138843, "title": "The Conjuring", "year": "2013" },
-          { "id": 419430, "title": "Get Out", "year": "2017" },
           { "id": 420818, "title": "It", "year": "2017" },
           { "id": 49013, "title": "Insidious", "year": "2010" },
           { "id": 8071, "title": "A Quiet Place", "year": "2018" },
-          { "id": 331482, "title": "Lights Out", "year": "2016" }
+          { "id": 331482, "title": "Lights Out", "year": "2016" },
+          { "id": 346364, "title": "It Chapter Two", "year": "2019" },
+          { "id": 259693, "title": "The Conjuring 2", "year": "2016" }
         ]
       }
     ]
