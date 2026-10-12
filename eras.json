@@ -5,32 +5,31 @@
     "startYear": 1930,
     "endYear": 1959,
     "thematicFocus": "Gothic escapism, romanticized monsters, external threats, nuclear anxiety.",
-    "culturalContext": "Born during the Great Depression and World War II, horror allowed audiences to project real-world anxieties onto fantastical creatures. Later, Cold War nuclear fears manifested in giant monster cinema.",
+    "culturalContext": "Born during the Great Depression and World War II, horror allowed audiences to project real-world anxieties onto fantastical creatures.",
     "subgenres": [
       {
         "category": "Classic Gothic & Romantic Monsters",
         "movies": [
-          { "id": 3035, "title": "Frankenstein", "year": "1931" },
-          { "id": 138, "title": "Dracula", "year": "1931" },
-          { "id": 1678, "title": "The Mummy", "year": "1932" },
-          { "id": 244, "title": "King Kong", "year": "1933" },
-          { "id": 11319, "title": "The Invisible Man", "year": "1933" },
-          { "id": 11984, "title": "The Wolf Man", "year": "1941" },
-          { "id": 158, "title": "The Bride of Frankenstein", "year": "1935" },
-          { "id": 13915, "title": "Cat People", "year": "1942" }
+          { "title": "Frankenstein" },
+          { "title": "Dracula" },
+          { "title": "The Mummy" },
+          { "title": "King Kong" },
+          { "title": "The Invisible Man" },
+          { "title": "The Wolf Man" },
+          { "title": "The Bride of Frankenstein" },
+          { "title": "Cat People" }
         ]
       },
       {
         "category": "Atomic Age & Creature Features",
         "movies": [
-          { "id": 397, "title": "Godzilla", "year": "1954" },
-          { "id": 10972, "title": "Creature from the Black Lagoon", "year": "1954" },
-          { "id": 11011, "title": "The Thing from Another World", "year": "1951" },
-          { "id": 16127, "title": "Them!", "year": "1954" },
-          { "id": 11843, "title": "Invasion of the Body Snatchers", "year": "1956" },
-          { "id": 11357, "title": "The Fly", "year": "1958" },
-          { "id": 27289, "title": "The Blob", "year": "1958" },
-          { "id": 26978, "title": "Plan 9 from Outer Space", "year": "1959" }
+          { "title": "Godzilla" },
+          { "title": "Creature from the Black Lagoon" },
+          { "title": "The Thing from Another World" },
+          { "title": "Them!" },
+          { "title": "Invasion of the Body Snatchers" },
+          { "title": "The Fly" },
+          { "title": "The Blob" }
         ]
       }
     ]
@@ -41,32 +40,31 @@
     "startYear": 1960,
     "endYear": 1979,
     "thematicFocus": "Real-world violence, domestic terror, loss of institutional trust, female autonomy.",
-    "culturalContext": "Civil rights unrest, the Vietnam War, and the decay of the nuclear family shifted horror into domestic spaces. Monsters became human neighbors, masked killers, or bodily threats.",
+    "culturalContext": "Civil rights unrest, the Vietnam War, and the decay of the nuclear family shifted horror into domestic spaces.",
     "subgenres": [
       {
         "category": "Domestic & Psychological Terror",
         "movies": [
-          { "id": 539, "title": "Psycho", "year": "1960" },
-          { "id": 10331, "title": "Night of the Living Dead", "year": "1968" },
-          { "id": 10781, "title": "The Texas Chain Saw Massacre", "year": "1974" },
-          { "id": 948, "title": "Halloween", "year": "1978" },
-          { "id": 8077, "title": "Rosemary's Baby", "year": "1968" },
-          { "id": 11902, "title": "Peeping Tom", "year": "1960" },
-          { "id": 782, "title": "The Birds", "year": "1963" },
-          { "id": 11504, "title": "Black Christmas", "year": "1974" }
+          { "title": "Psycho" },
+          { "title": "Night of the Living Dead" },
+          { "title": "The Texas Chain Saw Massacre" },
+          { "title": "Halloween" },
+          { "title": "Rosemary's Baby" },
+          { "title": "Peeping Tom" },
+          { "title": "The Birds" },
+          { "title": "Black Christmas" }
         ]
       },
       {
         "category": "Autonomy, Faith & Societal Decay",
         "movies": [
-          { "id": 9552, "title": "The Exorcist", "year": "1973" },
-          { "id": 731, "title": "Carrie", "year": "1976" },
-          { "id": 348, "title": "Alien", "year": "1979" },
-          { "id": 79, "title": "The Omen", "year": "1976" },
-          { "id": 11973, "title": "Suspiria", "year": "1977" },
-          { "id": 11013, "title": "Dawn of the Dead", "year": "1978" },
-          { "id": 11663, "title": "The Hills Have Eyes", "year": "1977" },
-          { "id": 12155, "title": "Invasion of the Body Snatchers", "year": "1978" }
+          { "title": "The Exorcist" },
+          { "title": "Carrie" },
+          { "title": "Alien" },
+          { "title": "The Omen" },
+          { "title": "Suspiria" },
+          { "title": "Dawn of the Dead" },
+          { "title": "The Hills Have Eyes" }
         ]
       }
     ]
@@ -77,31 +75,30 @@
     "startYear": 1980,
     "endYear": 1989,
     "thematicFocus": "Franchise morality plays, practical gore, censorship, home video explosion.",
-    "culturalContext": "The rise of VHS expanded horror consumption, spurring mass-market slasher franchises while conservative movements and Satanic Panic led to heavy censorship.",
+    "culturalContext": "The rise of VHS expanded horror consumption, spurring mass-market slasher franchises.",
     "subgenres": [
       {
         "category": "Iconic Slasher Franchises",
         "movies": [
-          { "id": 4488, "title": "Friday the 13th", "year": "1980" },
-          { "id": 377, "title": "A Nightmare on Elm Street", "year": "1984" },
-          { "id": 1091, "title": "The Thing", "year": "1982" },
-          { "id": 10138, "title": "Child's Play", "year": "1988" },
-          { "id": 10823, "title": "Hellraiser", "year": "1987" },
-          { "id": 11216, "title": "Poltergeist", "year": "1982" },
-          { "id": 694, "title": "The Shining", "year": "1980" },
-          { "id": 11224, "title": "Creepshow", "year": "1982" }
+          { "title": "Friday the 13th" },
+          { "title": "A Nightmare on Elm Street" },
+          { "title": "Child's Play" },
+          { "title": "Hellraiser" },
+          { "title": "Poltergeist" },
+          { "title": "The Shining" },
+          { "title": "Creepshow" }
         ]
       },
       {
         "category": "Body Horror & Creature Splatter",
         "movies": [
-          { "id": 933, "title": "The Fly", "year": "1986" },
-          { "id": 6267, "title": "Evil Dead II", "year": "1987" },
-          { "id": 10603, "title": "The Fog", "year": "1980" },
-          { "id": 11522, "title": "An American Werewolf in London", "year": "1981" },
-          { "id": 1547, "title": "The Lost Boys", "year": "1987" },
-          { "id": 10014, "title": "Re-Animator", "year": "1985" },
-          { "id": 1700, "title": "The Evil Dead", "year": "1981" }
+          { "title": "The Fly" },
+          { "title": "Evil Dead II" },
+          { "title": "The Fog" },
+          { "title": "An American Werewolf in London" },
+          { "title": "The Lost Boys" },
+          { "title": "Re-Animator" },
+          { "title": "The Thing" }
         ]
       }
     ]
@@ -112,31 +109,94 @@
     "startYear": 1990,
     "endYear": 1999,
     "thematicFocus": "Self-awareness, meta-commentary, genre deconstruction, structural cynicism.",
-    "culturalContext": "Over-saturation of 80s sequels caused horror to become self-conscious. Meta-horror subverted classic slasher rules for audiences raised on the genre.",
+    "culturalContext": "Over-saturation of 80s sequels caused horror to become self-conscious.",
     "subgenres": [
       {
         "category": "Meta-Slasher & Deconstruction",
         "movies": [
-          { "id": 4232, "title": "Scream", "year": "1996" },
-          { "id": 11021, "title": "Wes Craven's New Nightmare", "year": "1994" },
-          { "id": 4233, "title": "Scream 2", "year": "1997" },
-          { "id": 2120, "title": "I Know What You Did Last Summer", "year": "1997" },
-          { "id": 9890, "title": "Urban Legend", "year": "1998" }
+          { "title": "Scream" },
+          { "title": "Wes Craven's New Nightmare" },
+          { "title": "Scream 2" },
+          { "title": "I Know What You Did Last Summer" },
+          { "title": "Urban Legend" }
         ]
       },
       {
         "category": "Psychological Thrillers & Found Footage",
         "movies": [
-          { "id": 274, "title": "The Silence of the Lambs", "year": "1991" },
-          { "id": 8071, "title": "The Blair Witch Project", "year": "1999" },
-          { "id": 10129, "title": "Candyman", "year": "1992" },
-          { "id": 241, "title": "The Sixth Sense", "year": "1999" },
-          { "id": 628, "title": "Interview with the Vampire", "year": "1994" },
-          { "id": 1089, "title": "Misery", "year": "1990" },
-          { "id": 9691, "title": "Jacob's Ladder", "year": "1990" },
-          { "id": 807, "title": "Se7en", "year": "1995" }
+          { "title": "The Silence of the Lambs" },
+          { "title": "The Blair Witch Project" },
+          { "title": "Candyman" },
+          { "title": "The Sixth Sense" },
+          { "title": "Interview with the Vampire" },
+          { "title": "Misery" },
+          { "title": "Se7en" }
         ]
       }
     ]
   },
   {
+    "id": "extreme-realism-torture",
+    "title": "2000s: Extreme Realism & Torture Cinema",
+    "startYear": 2000,
+    "endYear": 2009,
+    "thematicFocus": "Post-9/11 anxiety, surveillance, visceral vulnerability, techno-dread.",
+    "culturalContext": "Post-9/11 sociopolitical anxiety fueled claustrophobic violence, alongside techno-dread remakes of J-horror.",
+    "subgenres": [
+      {
+        "category": "Torture Cinema & Visceral Horror",
+        "movies": [
+          { "title": "Saw" },
+          { "title": "Hostel" },
+          { "title": "Martyrs" },
+          { "title": "The Descent" },
+          { "title": "Resident Evil" },
+          { "title": "REC" },
+          { "title": "Wolf Creek" }
+        ]
+      },
+      {
+        "category": "Techno-Dread & J-Horror Remakes",
+        "movies": [
+          { "title": "The Ring" },
+          { "title": "The Grudge" },
+          { "title": "28 Days Later" },
+          { "title": "Dawn of the Dead" },
+          { "title": "Paranormal Activity" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "haunted-elevated",
+    "title": "2010s–Present: Haunted Houses & Elevated Horror",
+    "startYear": 2010,
+    "endYear": 2026,
+    "thematicFocus": "Cinematic universes vs. grief, trauma, social inequality, and auteur dread.",
+    "culturalContext": "The modern era split into studio-driven jump-scare franchises and indie elevated horror.",
+    "subgenres": [
+      {
+        "category": "Elevated & Auteur Dread",
+        "movies": [
+          { "title": "Get Out" },
+          { "title": "Hereditary" },
+          { "title": "Midsommar" },
+          { "title": "The Witch" },
+          { "title": "Us" },
+          { "title": "Smile" }
+        ]
+      },
+      {
+        "category": "Blockbuster Haunted Houses & Studio Universes",
+        "movies": [
+          { "title": "The Conjuring" },
+          { "title": "It" },
+          { "title": "Insidious" },
+          { "title": "A Quiet Place" },
+          { "title": "Lights Out" },
+          { "title": "The Conjuring 2" }
+        ]
+      }
+    ]
+  }
+]
