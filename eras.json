@@ -187,4 +187,17 @@
         ]
       },
       {
-        "category": "Blockbuster
+        "category": "Blockbuster Haunted Houses & Studio Thrillers",
+        "movies": [
+          { "id": 49013, "title": "Insidious", "year": "2010" },
+          { "id": 62214, "title": "The Cabin in the Woods", "year": "2011" },
+          { "id": 138843, "title": "The Conjuring", "year": "2013" },
+          { "id": 300669, "title": "Don't Breathe", "year": "2016" },
+          { "id": 396535, "title": "Train to Busan", "year": "2016" },
+          { "id": 420818, "title": "It", "year": "2017" },
+          { "id": 447332, "title": "A Quiet Place", "year": "2018" }
+        ]
+      }
+    ]
+  }
+]
