@@ -133,7 +133,7 @@
   },
   {
     "id": "extreme-realism-torture",
-    "title": "2000s: Civl Tensions & Torture Cinema",
+    "title": "2000s: Extreme Realism & Torture Cinema",
     "startYear": 2000,
     "endYear": 2009,
     "thematicFocus": "Visceral vulnerability, post-9/11 anxiety, surveillance, and body horror.",
@@ -186,4 +186,17 @@
         ]
       },
       {
-        "category": "Blockbuster Haunted Houses
+        "category": "Blockbuster Haunted Houses & Studio Thrillers",
+        "movies": [
+          { "title": "Insidious", "year": "2010" },
+          { "title": "The Cabin in the Woods", "year": "2011" },
+          { "title": "The Conjuring", "year": "2013" },
+          { "title": "Don't Breathe", "year": "2016" },
+          { "title": "Train to Busan", "year": "2016" },
+          { "title": "It", "year": "2017" },
+          { "title": "A Quiet Place", "year": "2018" }
+        ]
+      }
+    ]
+  }
+]
