@@ -46,7 +46,16 @@ async function selectEra(era) {
   `;
 
   try {
-    const promises = era.featuredMovies.map(item =>
+    // Extract movies from subgenres or fall back to featuredMovies
+    let allMovieItems = [];
+    if (era.subgenres && era.subgenres.length > 0) {
+      allMovieItems = era.subgenres.flatMap(sg => sg.movies || []);
+    } else if (era.featuredMovies) {
+      allMovieItems = era.featuredMovies;
+    }
+
+    // Fetch TMDB data for every movie in the list
+    const promises = allMovieItems.map(item =>
       fetch(`/api/movies?title=${encodeURIComponent(item.title)}&year=${item.year}`)
         .then(res => res.json())
         .then(data => (data.results && data.results[0] ? data.results[0] : null))
