@@ -140,3 +140,70 @@
     ]
   },
   {
+    "id": "extreme-realism-torture",
+    "title": "2000s: Extreme Realism & Torture Cinema",
+    "startYear": 2000,
+    "endYear": 2009,
+    "thematicFocus": "Post-9/11 anxiety, surveillance, visceral vulnerability, techno-dread.",
+    "culturalContext": "Post-9/11 sociopolitical anxiety and 24-hour news coverage fueled claustrophobic violence, alongside techno-dread remakes of J-horror.",
+    "subgenres": [
+      {
+        "category": "Torture Cinema & Visceral Horror",
+        "movies": [
+          { "id": 176, "title": "Saw", "year": "2004" },
+          { "id": 1580, "title": "Hostel", "year": "2005" },
+          { "id": 29917, "title": "Martyrs", "year": "2008" },
+          { "id": 1092, "title": "The Descent", "year": "2005" },
+          { "id": 1576, "title": "Resident Evil", "year": "2002" },
+          { "id": 1250, "title": "REC", "year": "2007" },
+          { "id": 1391, "title": "High Tension", "year": "2003" },
+          { "id": 9981, "title": "Wolf Creek", "year": "2005" }
+        ]
+      },
+      {
+        "category": "Techno-Dread & J-Horror Remakes",
+        "movies": [
+          { "id": 565, "title": "The Ring", "year": "2002" },
+          { "id": 1970, "title": "The Grudge", "year": "2004" },
+          { "id": 1581, "title": "28 Days Later", "year": "2002" },
+          { "id": 924, "title": "Dawn of the Dead", "year": "2004" },
+          { "id": 1422, "title": "Paranormal Activity", "year": "2007" },
+          { "id": 11621, "title": "The Devil's Backbone", "year": "2001" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "haunted-elevated",
+    "title": "2010s–Present: Haunted Houses & Elevated Horror",
+    "startYear": 2010,
+    "endYear": 2026,
+    "thematicFocus": "Cinematic universes vs. grief, trauma, social inequality, and auteur dread.",
+    "culturalContext": "The modern era split into studio-driven jump-scare franchises and indie elevated horror using horror conventions to explore grief and generational trauma.",
+    "subgenres": [
+      {
+        "category": "Elevated & Auteur Dread",
+        "movies": [
+          { "id": 419430, "title": "Get Out", "year": "2017" },
+          { "id": 493922, "title": "Hereditary", "year": "2018" },
+          { "id": 530385, "title": "Midsommar", "year": "2019" },
+          { "id": 310131, "title": "The Witch", "year": "2015" },
+          { "id": 507089, "title": "Us", "year": "2019" },
+          { "id": 766170, "title": "Smile", "year": "2022" }
+        ]
+      },
+      {
+        "category": "Blockbuster Haunted Houses & Studio Universes",
+        "movies": [
+          { "id": 138843, "title": "The Conjuring", "year": "2013" },
+          { "id": 420818, "title": "It", "year": "2017" },
+          { "id": 49013, "title": "Insidious", "year": "2010" },
+          { "id": 447332, "title": "A Quiet Place", "year": "2018" },
+          { "id": 331482, "title": "Lights Out", "year": "2016" },
+          { "id": 346364, "title": "It Chapter Two", "year": "2019" },
+          { "id": 259693, "title": "The Conjuring 2", "year": "2016" }
+        ]
+      }
+    ]
+  }
+]
