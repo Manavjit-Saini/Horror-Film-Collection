@@ -128,7 +128,7 @@ function renderMovies(movies) {
   });
 }
 
-// Opens the detail modal overlay for a selected movie with clean extended metadata
+// Opens the detail modal overlay for a selected movie cleanly
 function openMovieModal(movie) {
   const modal = document.getElementById('movie-modal');
   const modalBody = document.getElementById('modal-body');
@@ -141,14 +141,6 @@ function openMovieModal(movie) {
   const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
   const rating = movie.vote_average ? `${movie.vote_average.toFixed(1)} / 10` : 'N/A';
   const overview = movie.overview || 'No overview available for this title.';
-  
-  // Format runtime if available
-  let runtimeFormatted = '';
-  if (movie.runtime) {
-    const hours = Math.floor(movie.runtime / 60);
-    const mins = movie.runtime % 60;
-    runtimeFormatted = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
-  }
 
   modalBody.innerHTML = `
     <img class="modal-poster" src="${posterUrl}" alt="${movie.title}">
@@ -157,22 +149,10 @@ function openMovieModal(movie) {
       
       <div class="modal-meta-row">
         <span class="modal-rating">★ ${rating}</span>
-        ${runtimeFormatted ? `<span>• ${runtimeFormatted}</span>` : ''}
         <span>• Horror</span>
       </div>
 
       <p class="modal-overview">${overview}</p>
-
-      <div class="modal-crew">
-        <div class="crew-item">
-          <span>Release Date</span>
-          <strong>${movie.release_date || 'N/A'}</strong>
-        </div>
-        <div class="crew-item">
-          <span>TMDB Votes</span>
-          <strong>${movie.vote_count ? movie.vote_count.toLocaleString() : 'N/A'}</strong>
-        </div>
-      </div>
     </div>
   `;
 
