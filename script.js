@@ -40,3 +40,19 @@ async function selectEra(era) {
     if (grid) grid.innerHTML = '<p>Error loading movie data.</p>';
   }
 }
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const res = await fetch('eras.json');
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const eras = await res.json();
+    
+    initNav(eras);
+    if (eras.length > 0) selectEra(eras[0]);
+  } catch (err) {
+    console.error('Failed to load eras.json:', err);
+    const container = document.getElementById('movie-container');
+    if (container) {
+      container.innerHTML = `<p style="color: red; text-align: center;">Error loading eras data: ${err.message}</p>`;
+    }
+  }
+});
