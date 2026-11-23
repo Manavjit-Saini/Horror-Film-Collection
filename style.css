@@ -294,3 +294,35 @@ h1 {
     min-width: 150px;
   }
 }
+/* Watchlist Modal Button Styling & Animation */
+.watchlist-action-btn {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.watchlist-action-btn:hover:not(:disabled) {
+  background-color: #b80710;
+  transform: translateY(-2px);
+}
+
+/* Click Pop Animation */
+.watchlist-action-btn.clicked {
+  transform: scale(0.95);
+}
+
+/* Added / Disabled State */
+.watchlist-action-btn.added, 
+.watchlist-action-btn:disabled {
+  background-color: #2e7d32 !important; /* Success Green */
+  color: #e8f5e9;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.9;
+}
